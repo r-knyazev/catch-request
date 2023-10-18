@@ -1,0 +1,22 @@
+{
+  "name": "rknyazev/catch-request",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Roman Knyazev",
+      "email": "rk771szr@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Application\\": "Application/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "pecee/simple-router": "*",
+    "twig/twig": "^3.0"
+  }
+}

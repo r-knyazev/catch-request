@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+app/vendor
+app/Application/cache
+
+docker/.env
+docker/nginx/conf/*.conf
+docker/nginx/log

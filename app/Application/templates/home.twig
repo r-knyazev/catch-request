@@ -1,0 +1,33 @@
+<html lang="en">
+<body>
+<a href="{{ clearURI }}">Clear</a>
+{% for row in data %}
+    <div class="item">
+        {% set jsonDecoded = row |json_decode %}
+        {% for name, value in jsonDecoded %}
+            <div class="row">
+                <span class="row-title">{{ name }}: </span>{{ value |stripslashes |stripslashes }}
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+</body>
+<style>
+    .item {
+        margin: 20px 10px;
+        padding: 10px 10px;
+        border: 1px solid;
+        background: #e4e4e4;
+    }
+    .row {
+        border-bottom: 1px dotted;
+        overflow-wrap: break-word;
+    }
+    .row-title {
+        display: inline-block;
+        width: 100px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+</style>
+</html>
